@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-grey: hsl(0, 0%, 95%);
+
+    --font-size: 0.9375em;
+    --font-paragraph: "Lexend Deca", sans-serif;
+    --font-heading: "Big Shoulders Display", sans-serif;
+}
+
+*. *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-family: var(--font-paragraph);
+    font-size: var(--font-size);
+}
+
+body {
+    background: var(--very-light-grey);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 1rem;
+    max-width: 1000px;
+}
+
+.card__car-types {
+    padding: 3rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.card__car-types a {
+    background: var(--very-light-grey);
+    border: 2px solid var(--transparent-white);
+    transition:  all 0.3s ease-in-out;
+}
+
+.card__car-types:first-child {
+    background: var(--bright-orange);
+}
+
+.card__car-types:first-child a {
+    color: var(--bright-orange);
+}
+
+.card__car-types:first-child a:hover {
+    background: var(--bright-orange);
+    border: 2px solid var(--transparent-white);
+    color: var(--transparent-white);
+    transition: opacity 0.3s al
+}
+
+.card__car-types:nth-child(2) {
+    background: var(--dark-cyan);
+}
+
+.card__car-types:nth-child(2) a {
+    color: var(--dark-cyan);
+}
+
+.card__car-types:nth-child(2) a:hover {
+    background: var(--dark-cyan);
+    border: 2px solid var(--transparent-white);
+    color: var(--transparent-white);
+}
+
+.card__car-types:last-child {
+    background: var(--very-dark-cyan);
+}
+
+.card__car-types:last-child a {
+    color: var(--very-dark-cyan);
+}
+
+.card__car-types:last-child a:hover {
+    background: var(--very-dark-cyan);
+    border: 2px solid var(--transparent-white);
+    color: var(--transparent-white);
+}
+
+.card-icon {
+    width: 4rem;
+}
+
+.car-types__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.content__title {
+    color: var(--very-light-grey);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.content__text {
+    color: var(--transparent-white);
+    font-weight: 400;
+}
+
+.card__cta {;
+    background: #FFFFFF;
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 375px) {
+    main {
+        margin: 4rem 1rem;
+    }
+
+    .card {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "."
+        "."
+        "."; 
+    }
+
+    .car-types__content {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        margin: auto 1rem;
+    }
+
+    .card {  
+        display: grid; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        ". . .";    
+    }
+
+    .car-types__content {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 996px) {
+    main {
+        margin: auto 10%;
+    }
+}
+
+/*@media only screen and (min-width: 376px) {
+    main {
+        margin: auto 10%;
+    }
+
+    .card {  
+        display: grid; 
+        grid-auto-flow: column; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 0px 0px;     
+    }
+
+}*/
